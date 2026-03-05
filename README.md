@@ -1,5 +1,7 @@
 # cesarAIshepherd — Support Engineering Incident Lifecycle Visualizer
 
+[https://su0xpj-bastion.github.io/cesarAIshepherd-pages/](https://su0xpj-bastion.github.io/cesarAIshepherd-pages/) → [https://github.com/su0xpj-bastion/cesarAIshepherd-pages?tab=readme-ov-file#cesaraishepherd--support-engineering-incident-lifecycle-visualizer](https://github.com/su0xpj-bastion/cesarAIshepherd-pages?tab=readme-ov-file#cesaraishepherd--support-engineering-incident-lifecycle-visualizer)
+
 ## 1. Intro
 
 Interactive React dashboard simulating the L3 → L4 → L5 support engineering
@@ -21,22 +23,6 @@ High-level runtime sequence:
 5. Six tabs expose the full incident record: triage steps, code fix + Zendesk reply, event timeline, PIR, RCA, and runbook.
 6. `▶ RUN SIMULATION` steps through L3 → L4 → L5 actions sequentially at 900 ms per step.
 7. On completion, postmortem node activates and feedback loop banner renders.
-
-### Master Lifecycle Diagram
-
-```mermaid
-flowchart LR
-  A["Developer App\nSDK · key/env\ntimeout · retries"]
-  B["API Gateway\nAuth 401/403\nValidation 400/422\nRate Limit 429"]
-  C["Model Execution\ntext · tool_calls\nfinish_reason"]
-  D["App Middleware\nParse · Guardrails\nRAG · Agent Orch."]
-  E["Output + Telemetry\nLogs · Evals · CSAT\nFaithfulness"]
-  F["Incident Triage\nL3 runbook\nL4 diagnose+patch\nL5 systemic fix"]
-  G["Postmortem + Learn\nRunbook update\nRegression tests\nDataset update"]
-
-  A --> B --> C --> D --> E --> F --> G
-  G -.->|"↺ prevents repeat incidents"| A
-```
 
 Incident scenarios and affected nodes:
 
@@ -124,41 +110,6 @@ triage actions, and escalation paths.
 Top-right header button links to `/videos/` — `.webm` scenario walkthroughs
 rendered in the `VideosView` component.
 
-## 4. Prerequisites
+## Reference
 
-- Node 20+
-- npm 10+
-
-```bash
-node --version
-npm --version
-```
-
-## 5. Quick Start
-
-```bash
-npm install
-npm run dev        # http://localhost:5173
-```
-
-### Other commands
-
-```bash
-npm run build      # production build → dist/
-npm run preview    # serve dist/ locally
-npm run lint       # eslint
-```
-
-## 6. Troubleshooting
-
-- **Blank page on `npm run dev`**
-  - confirm Node 20+: `node --version`
-  - delete `node_modules` and re-run `npm install`
-- **Fonts not loading**
-  - `IBM Plex Mono` and `Space Grotesk` load from Google Fonts — requires internet access
-  - fallback renders in `Courier New` / system monospace
-- **Simulation steps not animating**
-  - ensure you are on the **Triage** tab before clicking `▶ RUN SIMULATION`
-  - switching tabs mid-run stops the interval; click the button again to restart
-- **Fix tab shows investigation banner**
-  - expected for s11 MODEL QUALITY — `noFix: true` means no code patch exists; panels show diagnosis + A/B harness instead
+- `https://developers.openai.com/`
