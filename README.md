@@ -1,6 +1,4 @@
-# cesarAIshepherd — Support Engineering Incident Lifecycle Visualizer
-
-[https://su0xpj-bastion.github.io/cesarAIshepherd-pages/](https://su0xpj-bastion.github.io/cesarAIshepherd-pages/) → [https://github.com/su0xpj-bastion/cesarAIshepherd-pages?tab=readme-ov-file#cesaraishepherd--support-engineering-incident-lifecycle-visualizer](https://github.com/su0xpj-bastion/cesarAIshepherd-pages?tab=readme-ov-file#cesaraishepherd--support-engineering-incident-lifecycle-visualizer)
+# [cesarAIshepherd](https://su0xpj-bastion.github.io/cesarAIshepherd-pages)
 
 ## 1. Intro
 
